@@ -1,0 +1,85 @@
+Bicycle tags :  https://wiki.openstreetmap.org/wiki/Bicycle
+
+Key	- Value -	Purpose
+
+cycleway - lane/oposit_lane - cycle infrastructure on the road
+
+maxspeed - speed limit - Roads with lower speed limits tend to be less crowded by cars.
+source:maxspeed - country_code:rural/country_code:urban/sign/… - Always tag the source of the maxspeed limit!
+surface=* -  - asphalt, sand, grass ...
+tracktype=* 
+smoothness=*
+traffic_calming=*	- -	Traffic calming features is a good way to limit the speed of motor vehicles and making the street safer for cyclists.
+lanes=*	- total number of marked lanes making up the way - Single lane wide roads with low speed limits tend to be low-stress routes (but may increase stress for cyclists that want to cycle fast)
+width -	width of road in metres -	Indicate a wide single lane road or a squeeze point
+shoulder - no/yes/left/right/both - Indicate the presence of a shoulder
+shoulder:width - width of shoulder in metres - Shoulder width
+cycleway - asl - Advanced stop line, also known as bike boxes in North America
+maxweight=* -  - Roads without heavy vehicles are more desirable to cyclists.
+hgv=* - - Roads without heavy vehicles are more desirable to cyclists.
+motor_vehicle=*	- no/destination/delivery/agricultural/etc. - Roads which restrict motor traffic (for example to reach a destination/residents: motor_vehicle=destination) are more desireable to cyclists.
+
+
+bicycle -	yes -	Where bicycles are permitted, overriding default access (such as to motorways that permit bicycles as commonly found in western parts of North America)
+bicycle -designated -	Where a way has been specially designated (typically by a government) for bicycle use
+bicycle	- use_sidepath -	Where cycling on the main road is legally discouraged because of a parallel compulsory cycle track. Check with local laws.
+bicycle -	optional_sidepath -	Where cycling on the main road is legally allowed but a parallel (optional) cycle track exists.
+bicycle -	no	- Where bicycles are not permitted, ensure this is indicated. Note that carrying or pushing bicycles may be still accepted[1][2].
+bicycle -	permissive -	Where bicycles do not have a legal right-of-way, but the land owner has indicated that bicycles are allowed.
+bicycle -	destination -	Where bicycles have a legal right-of-way, but only if their destination is within that street or area.
+bicycle -	dismount -	Where cycling is not allowed on short sections of signposted cycle routes.
+
+
+amenity	- bicycle_parking
+amenity	- bicycle_rental
+service:bicycle:rental -	yes
+shop -	bicycle
+service:bicycle:retail	- yes
+
+amenity	compressed_air - air pumps
+compressed_air	yes - air pumps
+service:bicycle:pump	yes - air pumps
+
+amenity	- bicycle_repair_station - self repair station
+service:bicycle:diy -	yes - self repair station
+
+tourism - - place to see or to stay (chalet ...)
+
+NATIONNAL/LOCAL/REGIONNAL ROUTE
+Tag	Element	Description
+icn=yes	way	Designates that a road or path is part of an International Cycling Network route.
+ncn=yes	way	Designates that a road or path is part of a National Cycling Network route.
+ncn=proposed	way	Designates that a road or path is part of a proposed National Cycling Network route.
+rcn=yes / proposed	way	As above, but for regional cycle routes.
+lcn=yes / proposed	way	As above, but for local cycle routes.
+icn_ref=number	way	A international cycle route, where number is the route number. icn=yes is implied
+ncn_ref=number	way	A national cycle route, where number is the route number. ncn=yes is implied
+rcn_ref=number	way	A regional cycle route, where number is the route number. rcn=yes is implied
+lcn_ref=number	way	A local cycle route, where number is the route number. lcn=yes is implied
+
+
+FOR COUNTING DATA
+amenity -	clock
+display	- digital
+man_made - monitoring_station - station to count smth
+monitoring:bicycle - yes - station counting bicycle and pedestrian at a point
+name -	name of counted street
+start_date -	year since starting counting
+support -	pole
+visibility -	street
+website -	URL of online data state
+
+EXEMPLE OF CYCLING ROAD RELATION
+tag - comment
+type=route
+route=bicycle/mtb -	See mountainbike for details on tagging mountainbike routes.
+network=icn/ncn/rcn/lcn -	Specify the network as an international route, a national route, a regional route, or a local route, as per the normal tagging of cycle routes. For tagging mountainbike routes more specific look here mountainbike
+cycle_network=*	- (optional) In countries that have (for instance) multiple regional route networks, this tag indicates the specific route system, much the way network=* does on road route relations.
+ref=number	- (optional) Numerical part of reference code of the route. (This formal limit was introduced originally to cater for a certain renderer, so using the full code should be fine too, as long as it can be read from signs along the route.) The network or cycle_network tag already distinguishes the type, so just use "ref" and not "ncn_ref" or similar.
+name=*	- (optional) The name of the route e.g. Jubilee Cycle Way
+state=proposed	- (optional) Routes are sometimes not official routes pending some negotiation or development -- the opencyclemap rendering shows these routes dotted.
+distance=distance - in km	(optional) The distance covered by a route in km
+ascent=ascent - in m	(optional) The ascent covered by a route in meters. If a route has start and end point at different altitude use descent too
+descent=descent - in m	(optional) The descent covered by a route in meters. Use it only if it differs from the ascent (different altitude at start/endpoint of a route).
+roundtrip=yes/no	- (optional) Use roundtrip=no to indicate that a route goes from A to B. Use roundtrip=yes to indicate that the start and finish of the route are at the same location (circular route).
+colour=*	- (optional) To indicate the official colour associated with a route. In the Waymarked Trails cycling map, the displayed ref/name of a route gets underlined in this colour (example).
