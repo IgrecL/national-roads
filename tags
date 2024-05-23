@@ -87,7 +87,7 @@ colour=*	- (optional) To indicate the official colour associated with a route. I
 
 
 
-NATION ROUTE ANALYSIS
+NATION ROUTE ANALYSIS - ways
 highway - unclassified, secondary, footway, primary, cycleway, tertiary
 lanes - 2
 surface, paved, asphalt
@@ -104,3 +104,6 @@ maxspeed - 50, 40
 footway - sidewalk
 segregated - no
 width - 2
+
+NATION ROUTE ANALYSIS - nodes
+highway - traffic_signals, crossing
