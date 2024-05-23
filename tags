@@ -83,3 +83,24 @@ ascent=ascent - in m	(optional) The ascent covered by a route in meters. If a ro
 descent=descent - in m	(optional) The descent covered by a route in meters. Use it only if it differs from the ascent (different altitude at start/endpoint of a route).
 roundtrip=yes/no	- (optional) Use roundtrip=no to indicate that a route goes from A to B. Use roundtrip=yes to indicate that the start and finish of the route are at the same location (circular route).
 colour=*	- (optional) To indicate the official colour associated with a route. In the Waymarked Trails cycling map, the displayed ref/name of a route gets underlined in this colour (example).
+
+
+
+
+NATION ROUTE ANALYSIS
+highway - unclassified, secondary, footway, primary, cycleway, tertiary
+lanes - 2
+surface, paved, asphalt
+bicycle - yes, designated
+layer - 1
+foot - designated
+bridge - yes (useless?)
+yh:STRUCTURE: 地上, 橋
+yh:TOTYUMONO: 供用中
+yh:TYPE: その他一般道, 一般都道府県道
+yh:WIDTH: 5.5m〜13.0m, 3.0m〜5.5m
+yh:WIDTH_RANK: 2, 3
+maxspeed - 50, 40
+footway - sidewalk
+segregated - no
+width - 2
