@@ -2,9 +2,9 @@ import pandas as pd
 import json
 import matplotlib.pyplot as plt
 
-df = pd.read_json('data/ncn_ways.json')
+df = pd.read_json('ncn_japan/ways.json')
 
-with open('data/ncn_ways.json') as file:
+with open('ncn_japan/ways.json') as file:
     data = json.load(file)
 for element in data:
     element['tags'] = [element['tags']]
@@ -25,3 +25,4 @@ for category in categories:
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.show()
+
