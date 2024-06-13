@@ -1,6 +1,6 @@
 import json
 
-with open('data/ncn_ways.json') as file:
+with open('ncn_kansai/nodes.json') as file:
     data = json.load(file)
 
 tag_statistics = {}
