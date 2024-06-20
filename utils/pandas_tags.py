@@ -2,12 +2,14 @@ import pandas as pd
 import json
 import matplotlib.pyplot as plt
 
-df = pd.read_json('ncn_japan/ways.json')
+df = pd.read_json('data/ncn_japan/ways.json')
 
-with open('ncn_japan/ways.json') as file:
+with open('data/ncn_japan/ways.json') as file:
     data = json.load(file)
+
 for element in data:
     element['tags'] = [element['tags']]
+    
 tags_df = pd.json_normalize(data, record_path=['tags'], meta=['id'])
 
 categories = tags_df.columns
